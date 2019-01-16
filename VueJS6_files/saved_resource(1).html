@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://fiddle.jshell.net/_display/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title></title>
+  
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <script type="text/javascript" src="./dummy.js.download"></script>
+
+    <link rel="stylesheet" type="text/css" href="./result-light.css">
+
+
+  <style id="compiled-css" type="text/css">
+      
+  </style>
+
+
+  <!-- TODO: Missing CoffeeScript 2 -->
+
+  <script type="text/javascript">
+
+
+    window.onload=function(){
+      
+Vue.filter('uppercase', function(value){
+  return value.toUpperCase();
+});
+
+new Vue({
+	el: '#app',
+	data: {
+ 		 title: 'hello world!',
+ 	 	message: 'something'
+
+},
+computed: {
+  theTitle: function() {
+    return this.title.toUpperCase();
+  }
+},
+filters: {
+  lowercase: function(value){
+    return value.toLowerCase(); 
+  }
+}  
+});
+
+    }
+
+</script>
+
+</head>
+<body>
+    <script src="./vue.js.download">
+</script>
+
+<div id="app"><p>hello world!</p> <p>SOMETHING</p></div>
+
+  
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: ""
+      }], "*")
+    }
+  </script>
+
+
+</body></html>
